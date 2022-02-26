@@ -7,13 +7,39 @@
     <title>Stopwatch</title>
 </head>
 <body>
-    <div id="display">00:00:00</div>
+    <div class="stopwatch">
+        <div id="display">00:00:00.00</div>
+    
+        <div class="controls">
+            <div class="startpause">
+                <div title="Start" id="start" >
+                    <div class="iconify" data-icon="bx-bx-play-circle" data-inline="false">
+                        start
+                    </div>
+                </div>
+            
+                <div title="Pause" id="pause">
+                    <div class="iconify" data-icon="bx-bx-pause-circle" data-inline="false">
+                        pause
+                    </div>
+                </div>
+            </div>
 
-    <button id="start">Start</button>
+            <div title="Lap" id="lap">
+                <div class="iconify" data-icon="radix-icons:lap-timer" data-inline="false"></div>
+            </div>
+        
+            <div title="Reset" id="stop">
+                <div class="iconify" data-icon="grommet-icons:power-reset" data-inline="false">
+                    reset
+                </div>
+            </div>
+        </div>
 
-    <button id="pause">Pause</button>
-
-    <button id="stop">Stop</button>
+        <div id="laps">
+            
+        </div>
+    </div>
 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="./app.js"></script>
