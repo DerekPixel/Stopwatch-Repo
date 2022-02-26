@@ -54,3 +54,74 @@ table {
 
 /*#endregion*/
 
+body {
+  background-color: rgb(15, 15, 36);
+  color: white;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+}
+
+.stopwatch {
+  width: 200px;
+}
+
+#display {
+  --sqrDemensions: 200px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: goldenrod;
+  border-style: solid;
+  font-size: 26px;
+  width: var(--sqrDemensions);
+  height: var(--sqrDemensions);
+  line-height: var(--sqrDemensions);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.iconify {
+  color: goldenrod;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+#pause {
+  display: none;
+}
+
+
+
+#laps {
+  position: absolute;
+  height: 150px;
+  width: inherit;
+  overflow-y:auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#laps::-webkit-scrollbar {
+  /* display: none; Chrome Safari Opera */
+  width: 5px;
+}
+#laps::-webkit-scrollbar-thumb {
+  background-color: goldenrod;
+}
+#laps::-webkit-scrollbar-track {
+  border-style: solid;
+}
+
+#laps > div {
+  margin: 5px 0;
+}
