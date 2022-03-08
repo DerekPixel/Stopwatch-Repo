@@ -61,16 +61,16 @@ function lap() {
     var lapTimeTotal = lapTimes.reduce((a, b) => a + b, 0);
     var lapTime = time - lapTimeTotal;
 
-    // if(numberOfLaps === 0) {
-    //     lapTimes.push(time)
-    //     newLap.textContent = `#${lapTimes.length}\u00A0\u00A0\u00A0\u00A0\u00A0${timeToString(time)}`;
-    //     lapsElement.insertBefore(newLap, lapsElement.firstChild);
-    //     numberOfLaps += 1;
-    // } else {
-    //     lapTimes.push(lapTime)
-    //     newLap.textContent = `#${lapTimes.length}\u00A0\u00A0\u00A0\u00A0\u00A0${timeToString(lapTime)}`;
-    //     lapsElement.insertBefore(newLap, lapsElement.firstChild);
-    // }
+    if(numberOfLaps === 0) {
+        lapTimes.push(time)
+        newLap.textContent = `#${lapTimes.length}\u00A0\u00A0\u00A0\u00A0\u00A0${timeToString(time)}`;
+        lapsElement.insertBefore(newLap, lapsElement.firstChild);
+        numberOfLaps += 1;
+    } else {
+        lapTimes.push(lapTime)
+        newLap.textContent = `#${lapTimes.length}\u00A0\u00A0\u00A0\u00A0\u00A0${timeToString(lapTime)}`;
+        lapsElement.insertBefore(newLap, lapsElement.firstChild);
+    }
     console.log(`laptime: ${timeToString(lapTime)}`);
     console.log(`lapElaspedTime: ${timeToString(lapElaspedTime)}`);
     console.log(`lapTimeTotal: ${timeToString(lapTimeTotal)}`)
